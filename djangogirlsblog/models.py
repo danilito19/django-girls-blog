@@ -1,6 +1,11 @@
 from django.db import models
 from django.utils import timezone
 
+#each class I create is a table in my database
+#and the functions and methods are column names
+# make sure to go tell django that I created this model
+# by using makemigratios command and then migrate command
+
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
